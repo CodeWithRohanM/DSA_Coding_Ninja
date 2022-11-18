@@ -18,9 +18,11 @@ function BubbleSort()
             if(arr[j] < arr[j+1])
             {
                 swapValues(j, j+1);
+                swapped = true;
             }
             console.log(arr);
         }
+
         console.log("Round = "+arr);
     }
 }
