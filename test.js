@@ -1,9 +1,7 @@
 
+let arr = [10,1,7,6,14,9];
 
-let arr = [6,5,20,32,12];
-let min = -1, index = -1;
-
-function swapValues(i,j)
+function swapValues(i, j)
 {
     let temp;
     temp = arr[i];
@@ -11,27 +9,25 @@ function swapValues(i,j)
     arr[j] = temp;
 }
 
-function selectionSort()
+function BubbleSort()
 {
-    for(let i = 0; i<arr.length-1;i++)
+    for(let i=arr.length-1; i>0 ; i--)
     {
-        min = arr[i];
-        index = i;
-        for(let j=i+1;j<arr.length;j++)
+        for(let j=0; j<i;j++)
         {
-            if(arr[j] < min)
+            if(arr[j] > arr[j+1])
             {
-                index = j;
-                min = arr[j];
+                swapValues(j, j+1);
             }
+            console.log(arr);
         }
-        swapValues(i, index);
-        console.log(arr);
+        console.log("Round = "+arr);
     }
 }
 
-selectionSort();
-console.log("The New Array After Selection Sort Is = "+arr);
+BubbleSort();
+
+console.log("The Bubble Sorted Array is = "+arr);
 
 
 
@@ -41,6 +37,52 @@ console.log("The New Array After Selection Sort Is = "+arr);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let arr = [6,5,20,32,12];
+// let min = -1, index = -1;
+
+// function swapValues(i,j)
+// {
+//     let temp;
+//     temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+// }
+
+// function selectionSort()
+// {
+//     for(let i = 0; i<arr.length-1;i++)
+//     {
+//         min = arr[i];
+//         index = i;
+//         for(let j=i+1;j<arr.length;j++)
+//         {
+//             if(arr[j] < min)
+//             {
+//                 index = j;
+//                 min = arr[j];
+//             }
+//         }
+//         swapValues(i, index);
+//         console.log(arr);
+//     }
+// }
+
+// selectionSort();
+// console.log("The New Array After Selection Sort Is = "+arr);
 
 
 
